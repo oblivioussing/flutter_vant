@@ -1,7 +1,7 @@
 name: flutter_vant
 description: flutter vant ui
 version: 0.0.1
-homepage:
+homepage: https://github.com/oblivioussing/flutter_vant
 repository: https://github.com/oblivioussing/flutter_vant
 environment:
   sdk: '>=2.19.4 <3.0.0'
