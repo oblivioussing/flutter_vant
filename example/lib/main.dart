@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vant/main.dart';
 
-import '/demo/button.dart';
-import '/demo/cell.dart';
-import '/demo/icon.dart';
-import '/demo/image.dart';
-import '/demo/loading.dart';
-import '/package/scene/button/button.dart';
-import '/package/style/color.dart';
+import './view/button.dart';
+import './view/cell.dart';
+import './view/icon.dart';
+import './view/image.dart';
+import './view/loading.dart';
 
 void main() {
   runApp(const App());
@@ -28,10 +27,10 @@ class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  HomeState createState() => HomeState();
 }
 
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

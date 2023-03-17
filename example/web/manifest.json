@@ -1,6 +1,6 @@
 {
-    "name": "vant_flutter",
-    "short_name": "vant_flutter",
+    "name": "flutter_vant_example",
+    "short_name": "flutter_vant_example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
