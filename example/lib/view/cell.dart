@@ -5,40 +5,40 @@ class CellDemo extends StatefulWidget {
   const CellDemo({Key? key}) : super(key: key);
 
   @override
-  _CellDemoState createState() => _CellDemoState();
+  CellDemoState createState() => CellDemoState();
 }
 
-class _CellDemoState extends State<CellDemo> {
+class CellDemoState extends State<CellDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VanNavBar(title: 'Cell'),
+      appBar: const VanNavBar(title: 'Cell'),
       backgroundColor: VanColor.gray1,
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 0,
           bottom: 30,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _base(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _card(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _size(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _icon(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _onlyValue(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _showArrow(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _group(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _slot(),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             _vertical(),
           ],
         ),
@@ -48,7 +48,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 基础用法
   Widget _base() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '基础用法',
       children: [
         VanCell(
@@ -67,7 +67,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 卡片风格
   Widget _card() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '卡片风格',
       inset: true,
       children: [
@@ -87,7 +87,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 单元格大小
   Widget _size() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '单元格大小',
       children: [
         VanCell(
@@ -108,7 +108,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 展示图标
   Widget _icon() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '展示图标',
       children: [
         VanCell(
@@ -123,7 +123,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 只设置 value
   Widget _onlyValue() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '只设置 value',
       children: [
         VanCell(
@@ -139,7 +139,7 @@ class _CellDemoState extends State<CellDemo> {
     return VanCellGroup(
       title: '展示箭头',
       children: [
-        VanCell(
+        const VanCell(
           title: '单元格',
           isLink: true,
         ),
@@ -147,11 +147,9 @@ class _CellDemoState extends State<CellDemo> {
           title: '单元格',
           value: '内容',
           isLink: true,
-          onPressed: () {
-            print('单元格');
-          },
+          onPressed: () {},
         ),
-        VanCell(
+        const VanCell(
           title: '单元格',
           value: '内容',
           isLink: true,
@@ -166,7 +164,7 @@ class _CellDemoState extends State<CellDemo> {
   Widget _group() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+      children: const [
         Padding(
           padding: EdgeInsets.only(
             left: 15,
@@ -206,7 +204,7 @@ class _CellDemoState extends State<CellDemo> {
       children: [
         VanCell(
           titleSlot: Row(
-            children: [
+            children: const [
               Icon(VanIcon.address),
               Icon(VanIcon.nickname),
             ],
@@ -217,7 +215,7 @@ class _CellDemoState extends State<CellDemo> {
         VanCell(
           title: '单元格',
           valueSlot: Row(
-            children: [
+            children: const [
               Icon(VanIcon.address),
               Icon(VanIcon.nickname),
             ],
@@ -230,7 +228,7 @@ class _CellDemoState extends State<CellDemo> {
 
   // 垂直居中
   Widget _vertical() {
-    return VanCellGroup(
+    return const VanCellGroup(
       title: '垂直居中',
       children: [
         VanCell(

@@ -6,7 +6,8 @@ import '/style/color.dart';
 import '/style/size.dart';
 
 class VanList extends StatefulWidget {
-  VanList({
+  const VanList({
+    super.key,
     required this.count,
     required this.itemBuilder,
     this.loading = false,
@@ -28,10 +29,10 @@ class VanList extends StatefulWidget {
   final VoidCallback? load;
 
   @override
-  State<VanList> createState() => _VanListState();
+  State<VanList> createState() => VanListState();
 }
 
-class _VanListState extends State<VanList> {
+class VanListState extends State<VanList> {
   var scrollController = ScrollController(); // 滚动控制器
   var loading = false;
 
@@ -47,7 +48,7 @@ class _VanListState extends State<VanList> {
     loading = widget.loading;
     if (widget.count == 0) {
       if (widget.finished) {
-        return VanEmpty(description: '暂无数据');
+        return const VanEmpty(description: '暂无数据');
       }
       return Center(
         child: loadingWdt(),
@@ -94,13 +95,13 @@ class _VanListState extends State<VanList> {
         return null;
       }
       return Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: VanPadding.base,
           bottom: VanPadding.base,
         ),
         child: Text(
           widget.finishedText,
-          style: TextStyle(
+          style: const TextStyle(
             color: VanColor.gray6,
             fontSize: VanFontSize.md,
           ),
@@ -116,7 +117,7 @@ class _VanListState extends State<VanList> {
   Widget? loadingWdt() {
     if (widget.loading) {
       return Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: VanPadding.xs,
           bottom: VanPadding.xs,
         ),

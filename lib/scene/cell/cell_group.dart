@@ -23,11 +23,11 @@ class VanCellGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var borderRadius;
-    var margin;
+    BorderRadius? borderRadius;
+    EdgeInsets? margin;
     // 圆角卡片风格
     if (inset) {
-      margin = EdgeInsets.only(
+      margin = const EdgeInsets.only(
         left: VanPadding.md,
         right: VanPadding.md,
       );

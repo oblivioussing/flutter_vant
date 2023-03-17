@@ -43,7 +43,7 @@ class _VanEmptyState extends State<VanEmpty> {
     return Text(
       widget.description,
       textAlign: TextAlign.center,
-      style: TextStyle(
+      style: const TextStyle(
         color: VanColor.gray7,
         fontSize: VanFontSize.lg,
       ),

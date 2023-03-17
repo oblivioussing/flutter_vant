@@ -5,16 +5,16 @@ class ImageDemo extends StatefulWidget {
   const ImageDemo({Key? key}) : super(key: key);
 
   @override
-  _ImageDemoState createState() => _ImageDemoState();
+  ImageDemoState createState() => ImageDemoState();
 }
 
-class _ImageDemoState extends State<ImageDemo> {
+class ImageDemoState extends State<ImageDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VanNavBar(title: 'Image'),
+      appBar: const VanNavBar(title: 'Image'),
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 16,
           top: 0,
           right: 16,
@@ -69,7 +69,7 @@ class _ImageDemoState extends State<ImageDemo> {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -85,7 +85,7 @@ class _ImageDemoState extends State<ImageDemo> {
                 _label('scaleDown'),
               ],
             ),
-            SizedBox(width: 100)
+            const SizedBox(width: 100)
           ],
         ),
       ],
@@ -119,7 +119,7 @@ class _ImageDemoState extends State<ImageDemo> {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -135,7 +135,7 @@ class _ImageDemoState extends State<ImageDemo> {
                 _label('scaleDown'),
               ],
             ),
-            SizedBox(width: 100)
+            const SizedBox(width: 100)
           ],
         ),
       ],
@@ -162,7 +162,7 @@ class _ImageDemoState extends State<ImageDemo> {
             _label('自定义提示'),
           ],
         ),
-        SizedBox(width: 100),
+        const SizedBox(width: 100),
       ],
     );
   }
@@ -187,20 +187,20 @@ class _ImageDemoState extends State<ImageDemo> {
 
   Widget _label(String text) {
     return Padding(
-      padding: EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.only(top: 10),
       child: Text(text),
     );
   }
 
   Widget _title(text) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: 30,
         bottom: 15,
       ),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: VanColor.gray6,
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 
 class VanImage extends StatelessWidget {
   const VanImage({
-    Key? key,
+    super.key,
     this.src = '',
     this.memory,
     this.fit,
@@ -50,8 +50,8 @@ class VanImage extends StatelessWidget {
       fit: fit,
       height: height,
       width: width,
-      placeholder: (context, url) => CircularProgressIndicator(),
-      errorWidget: (context, url, error) => Icon(Icons.error),
+      placeholder: (context, url) => const CircularProgressIndicator(),
+      errorWidget: (context, url, error) => const Icon(Icons.error),
     );
   }
 

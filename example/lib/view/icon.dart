@@ -5,11 +5,11 @@ class IconDemo extends StatefulWidget {
   const IconDemo({Key? key}) : super(key: key);
 
   @override
-  _IconDemoState createState() => _IconDemoState();
+  IconDemoState createState() => IconDemoState();
 }
 
-class _IconDemoState extends State<IconDemo> {
-  var _iconMap = {
+class IconDemoState extends State<IconDemo> {
+  var iconMap = {
     'delete': VanIcon.delete,
     'increase': VanIcon.increase,
     'close': VanIcon.close,
@@ -31,7 +31,7 @@ class _IconDemoState extends State<IconDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VanNavBar(title: 'Icon'),
+      appBar: const VanNavBar(title: 'Icon'),
       backgroundColor: VanColor.gray1,
       body: Container(
         decoration: BoxDecoration(
@@ -40,7 +40,7 @@ class _IconDemoState extends State<IconDemo> {
           ),
           color: VanColor.white,
         ),
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: _grid(),
       ),
     );
@@ -49,7 +49,7 @@ class _IconDemoState extends State<IconDemo> {
   Widget _grid() {
     return GridView.count(
       shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       crossAxisCount: 4,
       children: _gridList(),
     );
@@ -57,7 +57,7 @@ class _IconDemoState extends State<IconDemo> {
 
   List<Widget> _gridList() {
     List<Widget> list = [];
-    _iconMap.forEach((key, value) {
+    iconMap.forEach((key, value) {
       list.add(
         _gridItem(name: key, icon: value),
       );
@@ -70,7 +70,7 @@ class _IconDemoState extends State<IconDemo> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(icon),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(name),
       ],
     );

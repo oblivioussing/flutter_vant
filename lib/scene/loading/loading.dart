@@ -28,7 +28,7 @@ class VanLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flex(
-      direction: this.vertical ? Axis.vertical : Axis.horizontal,
+      direction: vertical ? Axis.vertical : Axis.horizontal,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         type == LoadingType.circular ? _circular() : _spinner(),
@@ -81,7 +81,7 @@ class VanLoading extends StatelessWidget {
 }
 
 class SpinnerLoading extends StatefulWidget {
-  SpinnerLoading({
+  const SpinnerLoading({
     super.key,
     @required this.color,
     @required this.size,
@@ -90,10 +90,10 @@ class SpinnerLoading extends StatefulWidget {
   final double? size;
 
   @override
-  _SpinnerLoadingState createState() => _SpinnerLoadingState();
+  SpinnerLoadingState createState() => SpinnerLoadingState();
 }
 
-class _SpinnerLoadingState extends State<SpinnerLoading>
+class SpinnerLoadingState extends State<SpinnerLoading>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller; // 动画控制器
 

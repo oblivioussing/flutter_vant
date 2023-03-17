@@ -46,7 +46,7 @@ class VanCell extends StatelessWidget {
     return TextButton(
       style: _buttonStyle(),
       child: Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: VanPadding.md,
           right: VanPadding.md,
         ),
@@ -83,7 +83,7 @@ class VanCell extends StatelessWidget {
       }),
       overlayColor: MaterialStateProperty.all(Colors.transparent),
       padding: MaterialStateProperty.all(
-        EdgeInsets.all(0),
+        const EdgeInsets.all(0),
       ),
       shape: MaterialStateProperty.all(
         RoundedRectangleBorder(
@@ -92,7 +92,7 @@ class VanCell extends StatelessWidget {
           ),
         ),
       ),
-      visualDensity: VisualDensity(
+      visualDensity: const VisualDensity(
         horizontal: VisualDensity.minimumDensity,
         vertical: VisualDensity.minimumDensity,
       ),
@@ -153,12 +153,12 @@ class VanCell extends StatelessWidget {
     if (titleSlot != null) {
       return SizedBox(child: titleSlot);
     }
-    var iconWdt;
+    Widget iconWdt;
     if (icon == null) {
-      iconWdt = SizedBox.shrink();
+      iconWdt = const SizedBox.shrink();
     } else {
       iconWdt = Padding(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           right: VanPadding.base,
         ),
         child: Icon(icon, size: 16),
@@ -169,7 +169,7 @@ class VanCell extends StatelessWidget {
         iconWdt,
         Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             color: VanColor.black,
             fontSize: VanFontSize.md,
           ),
@@ -182,7 +182,7 @@ class VanCell extends StatelessWidget {
     if (valueSlot != null) {
       return SizedBox(child: valueSlot);
     }
-    var icon;
+    Widget icon;
     if (isLink) {
       // 箭头方向
       var map = {
@@ -197,7 +197,7 @@ class VanCell extends StatelessWidget {
         color: VanColor.gray6,
       );
     } else {
-      icon = SizedBox.shrink();
+      icon = const SizedBox.shrink();
     }
     return Row(
       children: [
@@ -217,13 +217,13 @@ class VanCell extends StatelessWidget {
 
   Widget _label() {
     if (label.isEmpty) {
-      return SizedBox.shrink();
+      return const SizedBox.shrink();
     }
     return Container(
-      padding: EdgeInsets.only(top: VanPadding.base),
+      padding: const EdgeInsets.only(top: VanPadding.base),
       child: Text(
         label,
-        style: TextStyle(
+        style: const TextStyle(
           color: VanColor.gray6,
           fontSize: VanFontSize.sm,
         ),

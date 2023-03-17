@@ -6,7 +6,8 @@ import '/style/size.dart';
 import '/widget/border.dart';
 
 class VanButton extends StatefulWidget {
-  VanButton({
+  const VanButton({
+    super.key,
     required this.onPressed,
     this.text = '',
     this.onLongPress,
@@ -57,10 +58,10 @@ class VanButton extends StatefulWidget {
   final double loadingSize; // 加载图标大小
 
   @override
-  _VanButtonState createState() => _VanButtonState();
+  VanButtonState createState() => VanButtonState();
 }
 
-class _VanButtonState extends State<VanButton> {
+class VanButtonState extends State<VanButton> {
   late Color backgroundColor; // 背景颜色
   late double borderRadius; // 圆角
   late Color color; // 颜色
@@ -226,7 +227,7 @@ class _VanButtonState extends State<VanButton> {
       }),
       overlayColor: MaterialStateProperty.all(Colors.transparent),
       padding: MaterialStateProperty.all(
-        EdgeInsets.all(0),
+        const EdgeInsets.all(0),
       ),
       shape: MaterialStateProperty.all(
         RoundedRectangleBorder(
@@ -239,7 +240,7 @@ class _VanButtonState extends State<VanButton> {
       textStyle: MaterialStateProperty.all(
         TextStyle(fontSize: fontSize),
       ),
-      visualDensity: VisualDensity(
+      visualDensity: const VisualDensity(
         horizontal: VisualDensity.minimumDensity,
         vertical: VisualDensity.minimumDensity,
       ),
@@ -283,7 +284,7 @@ class _VanButtonState extends State<VanButton> {
 
   Widget _icon() {
     if (widget.icon == null) {
-      return SizedBox.shrink();
+      return const SizedBox.shrink();
     }
     return Row(
       children: [

@@ -5,16 +5,16 @@ class ButtonDemo extends StatefulWidget {
   const ButtonDemo({Key? key}) : super(key: key);
 
   @override
-  _ButtonDemoState createState() => _ButtonDemoState();
+  ButtonDemoState createState() => ButtonDemoState();
 }
 
-class _ButtonDemoState extends State<ButtonDemo> {
+class ButtonDemoState extends State<ButtonDemo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: VanNavBar(title: 'Button'),
+      appBar: const VanNavBar(title: 'Button'),
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           top: 10,
           right: 10,
           bottom: 30,
@@ -57,20 +57,20 @@ class _ButtonDemoState extends State<ButtonDemo> {
               type: ButtonType.primary,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '成功按钮',
               type: ButtonType.success,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '默认按钮',
               onPressed: () {},
             ),
           ],
         ),
-        SizedBox(height: 7),
+        const SizedBox(height: 7),
         Row(
           children: [
             VanButton(
@@ -78,13 +78,13 @@ class _ButtonDemoState extends State<ButtonDemo> {
               type: ButtonType.danger,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '警告按钮',
               type: ButtonType.warning,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '文字按钮',
               type: ButtonType.text,
@@ -106,7 +106,7 @@ class _ButtonDemoState extends State<ButtonDemo> {
           plain: true,
           onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '朴素按钮',
           type: ButtonType.success,
@@ -125,18 +125,14 @@ class _ButtonDemoState extends State<ButtonDemo> {
           text: '禁用按钮',
           type: ButtonType.primary,
           disabled: true,
-          onPressed: () {
-            print('disabled');
-          },
+          onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '禁用按钮',
           type: ButtonType.success,
           disabled: true,
-          onPressed: () {
-            print('disabled');
-          },
+          onPressed: () {},
         ),
       ],
     );
@@ -149,21 +145,17 @@ class _ButtonDemoState extends State<ButtonDemo> {
         VanButton(
           type: ButtonType.primary,
           loading: true,
-          onPressed: () {
-            print('disabled');
-          },
+          onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '保存',
           type: ButtonType.primary,
           loading: true,
           loadingType: LoadingType.spinner,
-          onPressed: () {
-            print('disabled');
-          },
+          onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '保存',
           type: ButtonType.success,
@@ -171,9 +163,7 @@ class _ButtonDemoState extends State<ButtonDemo> {
           loadingText: '努力加载中...',
           plain: true,
           width: 150,
-          onPressed: () {
-            print('disabled');
-          },
+          onPressed: () {},
         ),
       ],
     );
@@ -189,7 +179,7 @@ class _ButtonDemoState extends State<ButtonDemo> {
           square: true,
           onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '圆形按钮',
           type: ButtonType.success,
@@ -209,7 +199,7 @@ class _ButtonDemoState extends State<ButtonDemo> {
           type: ButtonType.primary,
           onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
           text: '按钮',
           icon: VanIcon.increase,
@@ -230,7 +220,7 @@ class _ButtonDemoState extends State<ButtonDemo> {
           size: ButtonSize.large,
           onPressed: () {},
         ),
-        SizedBox(height: 7),
+        const SizedBox(height: 7),
         Row(
           children: [
             VanButton(
@@ -238,14 +228,14 @@ class _ButtonDemoState extends State<ButtonDemo> {
               type: ButtonType.primary,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '小型按钮',
               type: ButtonType.primary,
               size: ButtonSize.small,
               onPressed: () {},
             ),
-            SizedBox(width: 13),
+            const SizedBox(width: 13),
             VanButton(
               text: '迷你按钮',
               type: ButtonType.primary,
@@ -263,21 +253,21 @@ class _ButtonDemoState extends State<ButtonDemo> {
     return Row(
       children: [
         VanButton(
-          backgroundColor: Color.fromRGBO(114, 50, 221, 1),
+          backgroundColor: const Color.fromRGBO(114, 50, 221, 1),
           text: '单色按钮',
           onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
-          color: Color.fromRGBO(114, 50, 221, 1),
+          color: const Color.fromRGBO(114, 50, 221, 1),
           plain: true,
           text: '单色按钮',
           onPressed: () {},
         ),
-        SizedBox(width: 13),
+        const SizedBox(width: 13),
         VanButton(
-          backgroundColor: Color.fromRGBO(114, 50, 221, 1),
-          gradient: LinearGradient(
+          backgroundColor: const Color.fromRGBO(114, 50, 221, 1),
+          gradient: const LinearGradient(
             colors: [
               Color.fromRGBO(255, 96, 52, 1),
               Color.fromRGBO(238, 10, 36, 1),
@@ -293,10 +283,10 @@ class _ButtonDemoState extends State<ButtonDemo> {
 
   Widget _title(text) {
     return Container(
-      padding: EdgeInsets.only(top: 15, bottom: 15),
+      padding: const EdgeInsets.only(top: 15, bottom: 15),
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           color: VanColor.gray7,
         ),
       ),
