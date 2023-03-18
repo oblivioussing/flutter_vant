@@ -15,6 +15,7 @@ class VanImage extends StatelessWidget {
     this.round = false,
     this.showError = true,
     this.showLoading = true,
+    this.package,
   });
 
   final String? src; // 图片链接
@@ -26,6 +27,7 @@ class VanImage extends StatelessWidget {
   final bool round; // 是否显示为圆形
   final bool showError; // 是否展示图片加载失败提示
   final bool showLoading; // 是否展示图片加载中提示
+  final String? package; // 包名
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +41,7 @@ class VanImage extends StatelessWidget {
     if (hasHttp) {
       return _netWorkImage(src!);
     } else {
-      var image = AssetImage(src!);
+      var image = AssetImage(src!, package: package);
       return _image(image);
     }
   }
