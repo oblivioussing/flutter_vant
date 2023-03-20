@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '/scene/empty/empty.dart';
-import '/scene/loading/loading.dart';
+import '/scene/empty.dart';
+import '/scene/loading.dart';
 import '/style/color.dart';
 import '/style/size.dart';
 

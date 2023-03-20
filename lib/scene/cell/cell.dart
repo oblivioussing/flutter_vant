@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '/scene/icon/icon.dart';
+import '/scene/icon.dart';
 import '/style/color.dart';
 import '/style/size.dart';
 import '/widget/border.dart';
