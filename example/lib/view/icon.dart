@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vant/main.dart';
+import 'package:flutter_vant/vant.dart';
 
 class IconDemo extends StatefulWidget {
   const IconDemo({Key? key}) : super(key: key);

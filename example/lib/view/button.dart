@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vant/main.dart';
+import 'package:flutter_vant/vant.dart';
 
 class ButtonDemo extends StatefulWidget {
   const ButtonDemo({Key? key}) : super(key: key);
