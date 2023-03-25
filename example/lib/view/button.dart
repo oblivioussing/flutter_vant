@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant/vant.dart';
 
+import '/share/index.dart';
+
 class ButtonDemo extends StatefulWidget {
   const ButtonDemo({Key? key}) : super(key: key);
 
@@ -11,37 +13,26 @@ class ButtonDemo extends StatefulWidget {
 class ButtonDemoState extends State<ButtonDemo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const VanNavBar(title: 'Button'),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-          top: 10,
-          right: 10,
-          bottom: 30,
-          left: 10,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title('按钮类型'),
-            _type(),
-            _title('朴素按钮'),
-            _plain(),
-            _title('禁用状态'),
-            _disabled(),
-            _title('加载状态'),
-            _loading(),
-            _title('按钮形状'),
-            _shape(),
-            _title('图标按钮'),
-            _icon(),
-            _title('按钮尺寸'),
-            _size(),
-            _title('自定义颜色'),
-            _customColor(),
-          ],
-        ),
-      ),
+    return BaseScaffold(
+      title: 'Button',
+      children: [
+        TextTitle(text: '按钮类型'),
+        _type(),
+        TextTitle(text: '朴素按钮'),
+        _plain(),
+        TextTitle(text: '禁用状态'),
+        _disabled(),
+        TextTitle(text: '加载状态'),
+        _loading(),
+        TextTitle(text: '按钮形状'),
+        _shape(),
+        TextTitle(text: '图标按钮'),
+        _icon(),
+        TextTitle(text: '按钮尺寸'),
+        _size(),
+        TextTitle(text: '自定义颜色'),
+        _customColor(),
+      ],
     );
   }
 
@@ -278,18 +269,6 @@ class ButtonDemoState extends State<ButtonDemo> {
           onPressed: () {},
         ),
       ],
-    );
-  }
-
-  Widget _title(text) {
-    return Container(
-      padding: const EdgeInsets.only(top: 15, bottom: 15),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: VanColor.gray7,
-        ),
-      ),
     );
   }
 }

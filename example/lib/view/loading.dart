@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant/vant.dart';
 
+import '/share/index.dart';
+
 class LoadingDemo extends StatefulWidget {
   const LoadingDemo({Key? key}) : super(key: key);
 
@@ -11,34 +13,22 @@ class LoadingDemo extends StatefulWidget {
 class LoadingDemoState extends State<LoadingDemo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const VanNavBar(title: 'Loading'),
-      backgroundColor: VanColor.white,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-          top: 0,
-          right: 10,
-          bottom: 30,
-          left: 10,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title('加载类型'),
-            _type(),
-            _title('自定义颜色'),
-            _color(),
-            _title('自定义大小'),
-            _size(),
-            _title('加载文案'),
-            _text(),
-            _title('垂直排列'),
-            _vertical(),
-            _title('自定义文本颜色'),
-            _textColor(),
-          ],
-        ),
-      ),
+    return BaseScaffold(
+      title: 'Loading',
+      children: [
+        TextTitle(text: '加载类型'),
+        _type(),
+        TextTitle(text: '自定义颜色'),
+        _color(),
+        TextTitle(text: '自定义大小'),
+        _size(),
+        TextTitle(text: '加载文案'),
+        _text(),
+        TextTitle(text: '垂直排列'),
+        _vertical(),
+        TextTitle(text: '自定义文本颜色'),
+        _textColor(),
+      ],
     );
   }
 
@@ -116,21 +106,6 @@ class LoadingDemoState extends State<LoadingDemo> {
           vertical: true,
         ),
       ],
-    );
-  }
-
-  Widget _title(text) {
-    return Container(
-      padding: const EdgeInsets.only(
-        top: 30,
-        bottom: 15,
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: VanColor.gray6,
-        ),
-      ),
     );
   }
 }

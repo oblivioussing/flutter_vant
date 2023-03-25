@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant/vant.dart';
 
-import './view/button.dart';
-import './view/cell.dart';
-import './view/icon.dart';
-import './view/image.dart';
-import './view/loading.dart';
+import '/view/button.dart';
+import '/view/cell.dart';
+import '/view/icon.dart';
+import '/view/field.dart';
+import '/view/image.dart';
+import '/view/loading.dart';
 
 void main() {
   runApp(const App());
@@ -70,6 +71,10 @@ class HomeState extends State<Home> {
         _cellBtn('Loading 加载', () {
           _router('loading');
         }),
+        _title('表单组件'),
+        _cellBtn('Field 输入框', () {
+          _router('field');
+        }),
       ],
     );
   }
@@ -111,6 +116,7 @@ class HomeState extends State<Home> {
       'cell': const CellDemo(),
       'icon': const IconDemo(),
       'image': const ImageDemo(),
+      'field': const Field(),
       'loading': const LoadingDemo(),
     };
     var wdt = map[path] ?? Container();

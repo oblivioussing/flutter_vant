@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vant/vant.dart';
 
+import '/share/index.dart';
+
 class ImageDemo extends StatefulWidget {
   const ImageDemo({Key? key}) : super(key: key);
 
@@ -11,29 +13,18 @@ class ImageDemo extends StatefulWidget {
 class ImageDemoState extends State<ImageDemo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const VanNavBar(title: 'Image'),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-          left: 16,
-          top: 0,
-          right: 16,
-          bottom: 30,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title('基础用法'),
-            _base(),
-            _title('填充模式'),
-            _mode(),
-            _title('圆形图片'),
-            _round(),
-            _title('加载中提示'),
-            _loading(),
-          ],
-        ),
-      ),
+    return BaseScaffold(
+      title: 'Image',
+      children: [
+        TextTitle(text: '基础用法'),
+        _base(),
+        TextTitle(text: '填充模式'),
+        _mode(),
+        TextTitle(text: '圆形图片'),
+        _round(),
+        TextTitle(text: '加载中提示'),
+        _loading(),
+      ],
     );
   }
 
@@ -176,6 +167,7 @@ class ImageDemoState extends State<ImageDemo> {
       fit: fit,
       height: 100,
       width: 100,
+      package: 'flutter_vant',
     );
   }
 
