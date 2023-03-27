@@ -114,9 +114,9 @@ class HomeState extends State<Home> {
     var map = {
       'button': const ButtonDemo(),
       'cell': const CellDemo(),
+      'field': const Field(),
       'icon': const IconDemo(),
       'image': const ImageDemo(),
-      'field': const Field(),
       'loading': const LoadingDemo(),
     };
     var wdt = map[path] ?? Container();

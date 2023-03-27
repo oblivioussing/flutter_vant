@@ -7,13 +7,12 @@ import '/widget/border.dart';
 
 class VanCellGroup extends StatelessWidget {
   const VanCellGroup({
-    Key? key,
     this.children = const <VanCell>[],
     this.backgroundColor = VanColor.white,
     this.title = '',
     this.inset = false,
     this.border = true,
-  }) : super(key: key);
+  });
 
   final List<VanCell> children;
   final Color backgroundColor; // 背景色
@@ -24,14 +23,25 @@ class VanCellGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BorderRadius? borderRadius;
-    EdgeInsets? margin;
+    List<Widget> list = [];
     // 圆角卡片风格
     if (inset) {
-      margin = const EdgeInsets.only(
-        left: VanPadding.md,
-        right: VanPadding.md,
-      );
-      borderRadius = VanBorder.radius(VanBorderSize.borderRadiusMd);
+      borderRadius = VanBorder.radius(VanBorderSize.borderRadiusLg);
+    } else {
+      borderRadius = BorderRadius.zero;
+    }
+    for (var i = 0; i < children.length; i++) {
+      list.add(children[i]);
+      if (i < children.length - 1) {
+        list.add(
+          Container(
+            margin: EdgeInsets.only(left: VanPadding.md),
+            decoration: BoxDecoration(
+              border: VanBorder.bottom(),
+            ),
+          ),
+        );
+      }
     }
 
     return Column(
@@ -40,14 +50,17 @@ class VanCellGroup extends StatelessWidget {
         _title(),
         Container(
           decoration: BoxDecoration(
-            color: backgroundColor,
+            border: border ? VanBorder.all() : null,
             borderRadius: borderRadius,
+            color: backgroundColor,
           ),
-          margin: margin,
-          child: Column(
-            children: children,
+          child: ClipRRect(
+            borderRadius: borderRadius,
+            child: Column(
+              children: list,
+            ),
           ),
-        )
+        ),
       ],
     );
   }

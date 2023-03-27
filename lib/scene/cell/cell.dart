@@ -21,7 +21,7 @@ class VanCell extends StatelessWidget {
     this.arrowDirection = ArrowDirection.right,
     this.required = false,
     this.center = false,
-    this.last = false,
+    // this.last = false,
     this.onPressed,
   }) : super(key: key);
 
@@ -38,7 +38,6 @@ class VanCell extends StatelessWidget {
   final ArrowDirection arrowDirection; // 箭头方向
   final bool required; // 是否显示表单必填星号
   final bool center; // 是否使内容垂直居中
-  final bool last; // 是否为最后一个元素
   final VoidCallback? onPressed; // 点击回调
 
   @override
@@ -106,9 +105,6 @@ class VanCell extends StatelessWidget {
       cellVerticalPadding = VanPadding.cellLarge;
     }
     return Container(
-      decoration: BoxDecoration(
-        border: last ? null : VanBorder.bottom(),
-      ),
       padding: EdgeInsets.only(
         top: cellVerticalPadding,
         bottom: cellVerticalPadding,

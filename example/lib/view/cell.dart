@@ -59,7 +59,6 @@ class CellDemoState extends State<CellDemo> {
           title: '单元格',
           value: '内容',
           label: '描述信息',
-          last: true,
         ),
       ],
     );
@@ -67,21 +66,23 @@ class CellDemoState extends State<CellDemo> {
 
   // 卡片风格
   Widget _card() {
-    return const VanCellGroup(
-      title: '卡片风格',
-      inset: true,
-      children: [
-        VanCell(
-          title: '单元格',
-          value: '内容',
-        ),
-        VanCell(
-          title: '单元格',
-          value: '内容',
-          label: '描述信息',
-          last: true,
-        ),
-      ],
+    return const Padding(
+      padding: EdgeInsets.only(left: 12, right: 12),
+      child: VanCellGroup(
+        title: '卡片风格',
+        inset: true,
+        children: [
+          VanCell(
+            title: '单元格',
+            value: '内容',
+          ),
+          VanCell(
+            title: '单元格',
+            value: '内容',
+            label: '描述信息',
+          ),
+        ],
+      ),
     );
   }
 
@@ -100,7 +101,6 @@ class CellDemoState extends State<CellDemo> {
           value: '内容',
           size: CellSize.large,
           label: '描述信息',
-          last: true,
         ),
       ],
     );
@@ -115,7 +115,6 @@ class CellDemoState extends State<CellDemo> {
           icon: Icons.local_airport_sharp,
           title: '单元格',
           value: '内容',
-          last: true,
         ),
       ],
     );
@@ -128,7 +127,6 @@ class CellDemoState extends State<CellDemo> {
       children: [
         VanCell(
           value: '内容',
-          last: true,
         ),
       ],
     );
@@ -154,7 +152,6 @@ class CellDemoState extends State<CellDemo> {
           value: '内容',
           isLink: true,
           arrowDirection: ArrowDirection.down,
-          last: true,
         ),
       ],
     );
@@ -179,7 +176,6 @@ class CellDemoState extends State<CellDemo> {
             VanCell(
               title: '单元格',
               value: '内容',
-              last: true,
             ),
           ],
         ),
@@ -189,7 +185,6 @@ class CellDemoState extends State<CellDemo> {
             VanCell(
               title: '单元格',
               value: '内容',
-              last: true,
             ),
           ],
         )
@@ -220,7 +215,6 @@ class CellDemoState extends State<CellDemo> {
               Icon(VanIcon.nickname),
             ],
           ),
-          last: true,
         ),
       ],
     );
@@ -236,7 +230,6 @@ class CellDemoState extends State<CellDemo> {
           label: '描述信息',
           value: '内容',
           center: true,
-          last: true,
         ),
       ],
     );

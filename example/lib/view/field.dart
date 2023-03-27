@@ -17,7 +17,12 @@ class _FieldState extends State<Field> {
       title: 'Field',
       children: [
         TextTitle(text: '基础用法'),
+        _base(),
       ],
     );
+  }
+
+  Widget _base() {
+    return Text('123');
   }
 }
