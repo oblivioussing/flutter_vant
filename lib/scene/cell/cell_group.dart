@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '/scene/cell/cell.dart';
 import '/style/color.dart';
 import '/style/size.dart';
 import '/widget/border.dart';
 
 class VanCellGroup extends StatelessWidget {
   const VanCellGroup({
-    this.children = const <VanCell>[],
+    this.children = const [],
     this.backgroundColor = VanColor.white,
     this.title = '',
     this.inset = false,
     this.border = true,
   });
 
-  final List<VanCell> children;
+  final List<Widget> children;
   final Color backgroundColor; // 背景色
   final String title; // 分组标题
   final bool inset; // 是否展示为圆角卡片风格
@@ -33,14 +32,7 @@ class VanCellGroup extends StatelessWidget {
     for (var i = 0; i < children.length; i++) {
       list.add(children[i]);
       if (i < children.length - 1) {
-        list.add(
-          Container(
-            margin: EdgeInsets.only(left: VanPadding.md),
-            decoration: BoxDecoration(
-              border: VanBorder.bottom(),
-            ),
-          ),
-        );
+        list.add(_border());
       }
     }
 
@@ -54,6 +46,7 @@ class VanCellGroup extends StatelessWidget {
             borderRadius: borderRadius,
             color: backgroundColor,
           ),
+          width: double.infinity,
           child: ClipRRect(
             borderRadius: borderRadius,
             child: Column(
@@ -80,6 +73,18 @@ class VanCellGroup extends StatelessWidget {
         style: const TextStyle(
           color: VanColor.gray6,
         ),
+      ),
+    );
+  }
+
+  Widget _border() {
+    return Container(
+      margin: EdgeInsets.only(
+        left: VanPadding.md,
+        right: VanPadding.md,
+      ),
+      decoration: BoxDecoration(
+        border: VanBorder.bottom(),
       ),
     );
   }

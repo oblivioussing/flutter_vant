@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '/scene/icon.dart';
 import '/style/color.dart';
 import '/style/size.dart';
-import '/widget/border.dart';
 
 class VanCell extends StatelessWidget {
   const VanCell({

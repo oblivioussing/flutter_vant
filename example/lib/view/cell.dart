@@ -48,7 +48,7 @@ class CellDemoState extends State<CellDemo> {
 
   // 基础用法
   Widget _base() {
-    return const VanCellGroup(
+    return VanCellGroup(
       title: '基础用法',
       children: [
         VanCell(

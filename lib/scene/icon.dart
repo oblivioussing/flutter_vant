@@ -81,4 +81,9 @@ class VanIcon {
     fontFamily: 'iconfont',
     fontPackage: 'flutter_vant',
   );
+  static const IconData clear = IconData(
+    0xe69a,
+    fontFamily: 'iconfont',
+    fontPackage: 'flutter_vant',
+  );
 }

@@ -4,6 +4,7 @@ export './scene/button.dart';
 export './scene/cell/cell.dart';
 export './scene/cell/cell_group.dart';
 export './scene/empty.dart';
+export './scene/field.dart';
 export './scene/icon.dart';
 export './scene/image.dart';
 export './scene/list.dart';

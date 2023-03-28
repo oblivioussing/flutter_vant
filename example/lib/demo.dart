@@ -18,7 +18,8 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Home(),
+      // home: Home(),
+      home: FieldDemo(),
     );
   }
 }
@@ -114,7 +115,7 @@ class HomeState extends State<Home> {
     var map = {
       'button': const ButtonDemo(),
       'cell': const CellDemo(),
-      'field': const Field(),
+      'field': const FieldDemo(),
       'icon': const IconDemo(),
       'image': const ImageDemo(),
       'loading': const LoadingDemo(),
